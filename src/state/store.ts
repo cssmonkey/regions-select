@@ -1,12 +1,24 @@
-import { configureStore } from '@reduxjs/toolkit';
+import {
+  configureStore,
+  PreloadedState,
+  StateFromReducersMapObject,
+} from '@reduxjs/toolkit';
 import region from './region/regionSlice';
 
-export const store = configureStore({
-  reducer: {
-    region,
-  },
-});
+export const reducer = {
+  region,
+};
 
-// Infer the `RootState` and `AppDispatch` types from the store itself
-export type RootState = ReturnType<typeof store.getState>;
-export type AppDispatch = typeof store.dispatch;
+export type RootState = StateFromReducersMapObject<typeof reducer>;
+
+export const initStore = (preloadedState?: PreloadedState<RootState>) => {
+  return configureStore({
+    reducer,
+    preloadedState,
+  });
+};
+
+export const store = initStore();
+
+type Store = ReturnType<typeof initStore>;
+export type AppDispatch = Store['dispatch'];
