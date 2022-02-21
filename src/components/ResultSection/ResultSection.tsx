@@ -58,7 +58,7 @@ const ResultSection: FC = () => {
         {name.common} ({flag})
       </h1>
       <dl className='country-data'>
-        <dt>Offical name</dt>
+        <dt>Official name</dt>
         <dd>{name.official}</dd>
         <dt>Native name(s)</dt>
         <dd>{renderNativeNames()}</dd>

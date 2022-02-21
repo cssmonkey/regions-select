@@ -1,6 +1,11 @@
 @import '../../../styles/core.scss';
 
 .page {
-  padding: $base-spacing * 6 0;
+  padding: $base-spacing * 2 $base-spacing * 2;
   max-width: 60rem;
+
+  @include breakpoint(medium) {
+    padding-top: $base-spacing * 6;
+    padding-bottom: $base-spacing * 6;
+  }
 }

@@ -14,8 +14,8 @@ const Page: FC = () => {
 
   return (
     <div className='page grid-container'>
-      <div className='grid-x grid-margin-x'>
-        <div className='cell'>
+      <div className='grid'>
+        <div className='cell auto'>
           <main>
             {currentStep === Steps.Step1 && <RegionSelectSection />}
             {currentStep === Steps.Step2 && <CountrySelectSection />}
