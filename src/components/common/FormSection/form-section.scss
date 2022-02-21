@@ -1,0 +1,13 @@
+@import '../../../styles/core.scss';
+
+.form-section {
+  fieldset {
+    border-color: lighten(get-color(grey), 50%);
+    border-width: 2px;
+    border-radius: 4px;
+    padding: $base-spacing * 2;
+  }
+  &__button-container {
+    text-align: right;
+  }
+}

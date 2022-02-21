@@ -1,26 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { LiveAnnouncer, LiveMessage } from 'react-aria-live';
 
-function App() {
+import { useAppSelector } from './state/hooks';
+import { regionErrorSelector, stepSelector } from './state/region/regionSlice';
+
+import Page from './components/common/Page/Page';
+import ErrorMessage from './components/common/ErrorMessage/ErrorMessage';
+
+const App = () => {
+  const regionError = useAppSelector(regionErrorSelector);
+  const currentStep = useAppSelector(stepSelector);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='app'>
+      <LiveAnnouncer>
+        <LiveMessage message={currentStep} aria-live='polite' />
+        {regionError && <ErrorMessage text={regionError.message} />}
+        <Page />
+      </LiveAnnouncer>
     </div>
   );
-}
+};
 
 export default App;

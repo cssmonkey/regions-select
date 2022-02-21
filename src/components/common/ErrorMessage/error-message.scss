@@ -1,0 +1,15 @@
+@import '../../../styles/core.scss';
+
+.error-message {
+  color: get-color(offwhite);
+  padding: $base-spacing * 2;
+  margin: $base-spacing * 4 auto;
+  border-radius: 4px;
+  border: 2px solid darken(#d4351c, 20%);
+  background-color: #d4351c;
+  max-width: 40rem;
+
+  p {
+    color: get-color(offwhite);
+  }
+}

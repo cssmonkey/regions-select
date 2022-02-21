@@ -1,0 +1,44 @@
+@import '../../styles/core.scss';
+
+.country-data {
+  width: auto;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: max-content;
+
+  dt,
+  dd {
+    padding: 0;
+    margin: 0;
+    margin-bottom: $base-spacing * 0.5;
+    text-align: left;
+    line-height: 1.5;
+  }
+
+  dt {
+    font-weight: bold;
+    grid-column: 1;
+    max-width: ($base-spacing * 14);
+    padding-right: $base-spacing;
+    padding-bottom: $base-spacing;
+
+    &:first-of-type {
+      margin-top: 0;
+    }
+  }
+
+  dd {
+    grid-column: 2;
+    padding-bottom: $base-spacing;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  &__flag {
+    width: 4rem;
+  }
+}

@@ -1,0 +1,42 @@
+@import '../../../styles/core.scss';
+
+button[type='submit'],
+button[type='button'] {
+  cursor: pointer;
+  font-size: $base-font-size * 1.5;
+  text-decoration: none;
+  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+
+  border: 1px solid;
+  border-color: get-color(black);
+  background-color: get-color(black);
+  color: get-color(offwhite);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-family: $font-decorative;
+  font-weight: bold;
+  overflow: hidden;
+  padding: $base-spacing * 0.75 ($base-spacing * 1.75);
+  user-select: none;
+  border-radius: 4px;
+  margin-top: $base-spacing * 1.5;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+    border-color: lighten(get-color(black), 10%);
+    background-color: lighten(get-color(black), 10%);
+  }
+
+  &[disabled] {
+    border: 1px solid #999;
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

@@ -1,0 +1,8 @@
+@import '../../../styles/core.scss';
+
+.select {
+  display: block;
+  margin-top: $base-spacing;
+  padding: $base-spacing * 0.75;
+  font-size: $base-font-size * 1.25;
+}
