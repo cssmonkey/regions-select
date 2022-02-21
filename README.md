@@ -1,18 +1,39 @@
-# Getting Started with Create React App
+## Project overview
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This App is built using [redux-toolkit](https://redux-toolkit.js.org/) for state management and React for the UI.
 
-## Available Scripts
+The UI displays a simple stepped process which allows a user to view country information after first selecting a region and then a country.
 
-In the project directory, you can run:
+### State management
 
-### `npm start`
+The state comprises of a single "slice" called region. The slice is split into the following:
 
-Runs the app in the development mode.\
+- actions: actions are dispatched to update state and fetch data from API
+- reducer: the reducer determines the changes to state after recieving an action
+- selectors: these are helpful function which return data derived from state
+
+### UI
+
+The UI is split into common and unique components. The common components are small reusable elements. The unique components generally comprise of the smaller common components and where integration with redux state takes place.
+
+### Styles
+
+SASS is used for styling following BEM naming convention. Core stlyes are set in /styles folder loosly following the [ITCSS](https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/) methodology for organisation. The core styles are where reusable sass mixins, vars and base styles are set. Component level SASS is stored alongside the react component for clear visibility.
+
+## `Running the App`
+
+**Ensure all dependencies are installed by runing `npm install` within the project directory**
+
+Then run `npm run start`. This runs the app in the development mode.\
+
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
+
+## Other available Scripts
+
+In the project directory, you can run:
 
 ### `npm test`
 
@@ -28,19 +49,3 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
