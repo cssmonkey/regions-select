@@ -1,0 +1,32 @@
+@mixin typography($type-class: base) {
+  font-weight: normal;
+
+  @if $type-class == h100 {
+    @include font-size($h100-font-sizes);
+    @include line-height($h100-line-heights);
+    font-weight: 600;
+  } @else if $type-class == h200 {
+    @include font-size($h200-font-sizes);
+    @include line-height($h200-line-heights);
+    font-weight: 600;
+  } @else if $type-class == h300 {
+    @include font-size($h300-font-sizes);
+    @include line-height($h300-line-heights);
+    font-weight: 600;
+  } @else if $type-class == h400 {
+    @include font-size($h400-font-sizes);
+    @include line-height($h400-line-heights);
+    font-weight: 600;
+  } @else if $type-class == h500 {
+    @include font-size($h500-font-sizes);
+    @include line-height($h500-line-heights);
+    font-weight: 600;
+  } @else if $type-class == h600 {
+    @include font-size($h600-font-sizes);
+    @include line-height($h600-line-heights);
+    font-weight: 600;
+  } @else if $type-class == base {
+    @include font-size($base-font-sizes);
+    @include line-height($base-line-heights);
+  }
+}

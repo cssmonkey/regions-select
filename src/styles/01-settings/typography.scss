@@ -1,0 +1,85 @@
+$base-font-size: 1rem !default;
+$base-font-size--px: 16px !default;
+
+// **
+// * Font Families
+// *
+$font-fallback: Arial, sans-serif !default;
+$font-default: Helvetica, #{$font-fallback} !default;
+$font-decorative: "Open Sans", #{$font-fallback} !default;
+
+$fontsFamilies: (
+  (
+    class: heading,
+    family: $font-decorative,
+  ),
+  (
+    class: default,
+    family: $font-default,
+  )
+) !default;
+
+$h100-font-sizes: (
+  null: rem-calc(40),
+  460px: rem-calc(64),
+  1024px: rem-calc(88),
+) !default;
+$h100-line-heights: (
+  null: 1.2,
+  460px: 1.25,
+  1024px: 1.18,
+) !default;
+
+$h200-font-sizes: (
+  null: rem-calc(32),
+  460px: rem-calc(48),
+  1024px: rem-calc(56),
+) !default;
+$h200-line-heights: (
+  null: 1.25,
+  460px: 1.17,
+  1024px: 1.14,
+) !default;
+
+$h300-font-sizes: (
+  null: rem-calc(24),
+  460px: rem-calc(32),
+  1024px: rem-calc(40),
+) !default;
+$h300-line-heights: (
+  null: 1.33,
+  460px: 1.25,
+  1024px: 1.2,
+) !default;
+
+$h400-font-sizes: (
+  null: rem-calc(24),
+  1024px: rem-calc(32),
+) !default;
+$h400-line-heights: (
+  null: 1.33,
+  1024px: 1.25,
+) !default;
+
+$h500-font-sizes: (
+  null: rem-calc(20),
+  1024px: rem-calc(24),
+) !default;
+$h500-line-heights: (
+  null: 1.2,
+  1024px: 1.33,
+) !default;
+
+$h600-font-sizes: (
+  null: rem-calc(20),
+) !default;
+$h600-line-heights: (
+  null: 1.2,
+) !default;
+
+$base-font-sizes: (
+  null: rem-calc(16),
+) !default;
+$base-line-heights: (
+  null: 1.5,
+) !default;

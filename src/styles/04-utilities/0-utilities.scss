@@ -1,0 +1,11 @@
+@import "colors";
+@import "font-sizing";
+@import "spacing";
+@import "typography";
+
+@mixin design-system-utilities {
+  @include design-system-utilities-colors;
+  @include design-system-utilities-font-sizing;
+  @include design-system-utilities-spacing;
+  @include design-system-utilities-typography;
+}

@@ -1,0 +1,12 @@
+$colors: (
+  black: #002e43,
+  grey: #5f6f7e,
+  offwhite: #f8f8f8,
+  green: #659d89,
+  pink: #dc2a5f,
+  blue: #31d2f7,
+) !default;
+
+@function get-color($color) {
+  @return map-get($colors, $color);
+}

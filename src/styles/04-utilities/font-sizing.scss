@@ -1,0 +1,25 @@
+@mixin design-system-utilities-font-sizing {
+  .h100 {
+    @include typography(h100);
+  }
+
+  .h200 {
+    @include typography(h200);
+  }
+
+  .h300 {
+    @include typography(h300);
+  }
+
+  .h400 {
+    @include typography(h400);
+  }
+
+  .h500 {
+    @include typography(h500);
+  }
+
+  .h600 {
+    @include typography(h600);
+  }
+}

@@ -1,0 +1,69 @@
+@mixin design-system-elements-base {
+  html {
+    background-color: get-color(white);
+    box-sizing: border-box;
+    font-size: $base-font-size;
+    font-family: $font-default;
+    word-wrap: break-word;
+    -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
+    text-rendering: optimizeLegibility;
+    color: get-color(black);
+  }
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+
+  img,
+  iframe {
+    max-width: 100%;
+  }
+
+  p {
+    margin: 0;
+    padding: 0;
+  }
+
+  ul,
+  ol {
+    margin: 0;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  button[tabindex="0"] {
+    cursor: pointer;
+  }
+
+  table,
+  p,
+  ul,
+  ol {
+    color: get-color(black);
+    @include line-height($base-line-heights);
+  }
+
+  figure {
+    margin: 0;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0;
+    font-weight: normal;
+  }
+}

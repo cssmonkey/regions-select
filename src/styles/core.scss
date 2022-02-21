@@ -1,0 +1,13 @@
+// import vendors
+@import '~foundation-sites/scss/foundation';
+
+// core
+@import './01-settings/0-settings';
+@import './02-tools/0-tools';
+@import './03-elements/0-elements';
+@import './04-utilities/0-utilities';
+
+@mixin design-system {
+  @include design-system-elements;
+  @include design-system-utilities;
+}

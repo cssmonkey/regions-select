@@ -1,0 +1,10 @@
+@import "core";
+
+// import everything from design system
+@include design-system;
+
+// import foundation mixins
+@include foundation-xy-grid-classes;
+@include foundation-flex-classes;
+@include foundation-visibility-classes;
+@include foundation-responsive-embed;

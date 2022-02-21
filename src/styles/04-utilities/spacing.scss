@@ -1,0 +1,91 @@
+@mixin design-system-utilities-spacing {
+  @for $i from 0 through 8 {
+    $margin: $base-spacing * $i;
+    $padding: $base-spacing * $i;
+
+    .u-margin-#{$i} {
+      margin: $margin !important;
+    }
+    .u-margin-top-#{$i} {
+      margin-top: $margin !important;
+    }
+    .u-margin-bottom-#{$i} {
+      margin-bottom: $margin !important;
+    }
+    .u-margin-left-#{$i} {
+      margin-left: $margin !important;
+    }
+    .u-margin-right-#{$i} {
+      margin-right: $margin !important;
+    }
+
+    .u-padding-#{$i} {
+      padding: $padding !important;
+    }
+    .u-padding-top-#{$i} {
+      padding-top: $padding !important;
+    }
+    .u-padding-bottom-#{$i} {
+      padding-bottom: $padding !important;
+    }
+    .u-padding-left-#{$i} {
+      padding-left: $padding !important;
+    }
+    .u-padding-right-#{$i} {
+      padding-right: $padding !important;
+    }
+
+    @each $name, $value in $breakpoints {
+      .u-margin-#{$name}-#{$i} {
+        @include breakpoint($name) {
+          margin: $margin !important;
+        }
+      }
+      .u-margin-top-#{$name}-#{$i} {
+        @include breakpoint($name) {
+          margin-top: $margin !important;
+        }
+      }
+      .u-margin-bottom-#{$name}-#{$i} {
+        @include breakpoint($name) {
+          margin-bottom: $margin !important;
+        }
+      }
+      .u-margin-left-#{$name}-#{$i} {
+        @include breakpoint($name) {
+          margin-left: $margin !important;
+        }
+      }
+      .u-margin-right-#{$name}-#{$i} {
+        @include breakpoint($name) {
+          margin-right: $margin !important;
+        }
+      }
+      .u-padding-#{$name}-#{$i} {
+        @include breakpoint($name) {
+          padding: $padding !important;
+        }
+      }
+      .u-padding-top-#{$name}-#{$i} {
+        @include breakpoint($name) {
+          padding-top: $padding !important;
+        }
+      }
+      .u-padding-bottom-#{$name}-#{$i} {
+        @include breakpoint($name) {
+          padding-bottom: $padding !important;
+        }
+      }
+      .u-padding-left-#{$name}-#{$i} {
+        @include breakpoint($name) {
+          padding-left: $padding !important;
+        }
+      }
+      .u-padding-right-#{$name}-#{$i} {
+        @include breakpoint($name) {
+          padding-right: $padding !important;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,5 @@
+@import 'base';
+
+@mixin design-system-elements {
+  @include design-system-elements-base;
+}
